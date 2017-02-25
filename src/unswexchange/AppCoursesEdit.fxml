@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unswexchange.AppCoursesEditController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane>
+               <children>
+                  <VBox fillWidth="false" minWidth="-Infinity" style="-fx-border-radius: 10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="24.0" prefWidth="906.0">
+                           <children>
+                              <Hyperlink alignment="CENTER" onAction="#generalHyperPressed" prefWidth="180.0" style="-fx-background-color: black; -fx-border-radius: 7 7 0 0; -fx-background-radius: 7 7 0 0;" text="General Information" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Hyperlink>
+                              <Hyperlink alignment="CENTER" prefWidth="180.0" style="-fx-background-color: black; -fx-border-radius: 7 7 0 0; -fx-background-radius: 7 7 0 0;" text="Courses" textFill="GOLD">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Hyperlink>
+                              <Hyperlink alignment="CENTER" onAction="#attachmentsHyperPressed" prefWidth="180.0" style="-fx-background-color: black; -fx-border-radius: 7 7 0 0; -fx-background-radius: 7 7 0 0;" text="Attachments" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Hyperlink>
+                              <Hyperlink alignment="CENTER" onAction="#questionsHyperPressed" prefWidth="180.0" style="-fx-background-color: black; -fx-background-radius: 7 7 0 0; -fx-border-radius: 7 7 0 0;" text="Exchange Questions" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Hyperlink>
+                              <Hyperlink alignment="CENTER" onAction="#commentsHyperPressed" prefWidth="180.0" style="-fx-background-color: black; -fx-background-radius: 7 7 0 0; -fx-border-radius: 7 7 0 0;" text="Status/Comments" textFill="#f4f3f3">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Hyperlink>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="268.0" prefWidth="904.0" style="-fx-border-color: black; -fx-border-radius: 0 0 10 10; -fx-background-radius: 0 0 10 10;">
+                           <children>
+                              <TableView fx:id="coursesTable" prefHeight="264.0" prefWidth="893.0" style="-fx-border-radius: 0 0 10 10; -fx-background-radius: 0 0 10 10;">
+                                 <columns>
+                                    <TableColumn fx:id="courseCodeCell" prefWidth="143.0" style="-fx-alignment: top-right;" text="UNSW Course " />
+                                    <TableColumn fx:id="courseNameCell" minWidth="0.0" prefWidth="112.0" />
+                                    <TableColumn fx:id="courseNameCell1" minWidth="0.0" prefWidth="125.0" />
+                                    <TableColumn fx:id="foreignCcourseCodeCell" minWidth="0.0" prefWidth="141.0" style="-fx-alignment: top-right;" text="Foreign Course " />
+                                    <TableColumn fx:id="foreignCcourseNameCell" prefWidth="160.0" />
+                                    <TableColumn fx:id="removeColumn" prefWidth="220.0" style="-fx-alignment: center;" text="Remove" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="45.0" prefWidth="899.0">
+                           <children>
+                              <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: grey;" text="Back">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="addCourseButton" mnemonicParsing="false" onAction="#addCourseButtonPressed" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: Green;" text="Add a Course" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="600.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <BorderPane.margin>
+                        <Insets top="20.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <Region prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Region prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <VBox BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <ImageView fitHeight="69.0" fitWidth="367.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Business%20Logo.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Line endX="1366.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Line>
+                  <ToolBar style="-fx-background-color: black;">
+                     <items>
+                        <Label text="Home" textFill="#edbb18">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator maxHeight="10.0" orientation="VERTICAL" />
+                        <Label text="About Exchange" textFill="#fffefe">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator maxHeight="10.0" orientation="VERTICAL" />
+                        <Label text="My Dashboard" textFill="WHITE">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator maxHeight="10.0" orientation="VERTICAL" />
+                        <Region prefHeight="25.0" prefWidth="800.0" />
+                        <Label fx:id="welcomeLabel" prefHeight="17.0" prefWidth="114.0" text="Welcome" textFill="WHITE" />
+                        <Hyperlink onAction="#logoutPressed" text="Logout" textFill="GOLD" underline="true">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Hyperlink>
+                     </items>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ToolBar>
+                  <Label text="My Applications ">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ToolBar style="-fx-background-color: black;">
+                           <items>
+                              <Label text="Privacy Policy" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Copyright &amp; Disclaimer" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Accessibility" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Site Feedback" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Site Map" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                           </items>
+                        </ToolBar>
+                        <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW Sydney NSW 2052 Australia Telephone +61 2 93851000" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Authorised by Pro-Vice-Chancellor (Students)" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW CRICOS Provider Code: 00098G ABN: 57 195 873 179" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Region maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: black;" />
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Page Last updated: 18 September 2015" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="1366.0" stroke="#eebd34" strokeMiterLimit="0.0" strokeWidth="20.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

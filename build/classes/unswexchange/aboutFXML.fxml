@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unswexchange.AboutController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logoImageView" fitHeight="69.0" fitWidth="367.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Business%20Logo.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Line endX="1366.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Line>
+                  <ToolBar style="-fx-background-color: black;">
+                     <items>
+                        <Hyperlink onAction="#logoutPressed" text="Home" textFill="GOLD" />
+                        <Separator maxHeight="20.0" maxWidth="1.0" orientation="VERTICAL" />
+                        <Hyperlink text="About Exchange" textFill="GOLD" />
+                        <Separator maxHeight="20.0" maxWidth="1.0" orientation="VERTICAL" />
+                        <Region prefHeight="25.0" prefWidth="950.0" />
+                        <Label fx:id="loginLabel" style="-fx-text-fill: white;" text="Login" />
+                     </items>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <AnchorPane>
+               <children>
+                  <VBox style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="homeLabel" text="About Exchange">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Accordion style="-fx-focus-color: gold;" VBox.vgrow="ALWAYS">
+                                <panes>
+                                  <TitledPane animated="false" style="-fx-base: black; -fx-focus-color: gold; -fx-text-fill: white; -fx-font-family: arial; -fx-font-size: 20;" text="Program Overview">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-base: white; -fx-border-color: white;" text="Through student exchange, undergraduate, honours and postgraduate coursework students gain credit towards their degree while studying, living and travelling overseas. Exchange is also eligible for recognition on your AHEGS. From China to Germany to the Unites States, you can choose from a wide range of courses which may not be offered at UNSW. Many of our partner institutions also teach their courses in English." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                  <TitledPane animated="false" style="-fx-background-color: black; -fx-base: black; -fx-focus-color: gold; -fx-font-family: arial; -fx-font-size: 20;" text="How does it work?">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-base: white; -fx-border-color: white;" text="Student exchange is part of your degree. The way it works is that you remain enrolled at UNSW while on exchange and, at the end of your exchange, you bring a full-time credit load back to your UNSW degree. Exchange does not add extra time to your studies.A student exchange program is always a full-time workload, regardless of whether you're enrolled full-time or part-time at UNSW. &#10;&#10;For each semester you are on exchange, you will be enrolled in 24 unit of credits (even if you take on 18 units of credit).The courses you take and pass at the partner university are credited back to your UNSW degree (to a maximum of 24 credit units per semester). However, the specific marks you attain for each course are not transferred. Your transcript simply shows satisfactory for the courses transferred. You will receive a copy of the partner university's transcript at the end of your exchange." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                  <TitledPane animated="false" style="-fx-base: black; -fx-font-family: arial; -fx-font-size: 20; -fx-focus-color: gold;" text="Cost and Scholarships">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-base: white; -fx-border-color: white;" text="It is important to plan your finances. As a general rule, you should be able to show that you will have at least AUD$2,200 available to you for every month of the exchange.You will need to cover your living expenses, including accommodation, travel and food. Living costs vary according to your destination. Visit the international students sections of the partner institution websites to find out more about the cost of living, specific to each city.Many scholarships and traineeships will continue while you are on exchange.&#10;&#10; Please contact your sponsoring body about any conditions that may affect your application.Tuition feesSome destinations may require you to pay additional fees but in general, you do not pay tuition fees to your host university. Instead, you continue to pay tuition to UNSW.A student exchange program constitutes a full-time workload for both full-time and part-time students. During each semester, you will be enrolled in 24 credit units. This in turn determines your contribution or tuition band fee rate and the amount you are charged. This amount is non-negotiable, even if you only take 18 units of credit." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                    <TitledPane animated="false" style="-fx-base: black; -fx-focus-color: gold; -fx-font-family: arial; -fx-font-size: 20;" text="Application - What do I need to start?">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <TextArea editable="false" style="-fx-background-color: white; -fx-base: white; -fx-border-color: white;" text="At first studying overseas on exchange might seem daunting but as returned students will tell you - it's worth it! The entire application process takes about nine months and you should expect to spend about six weeks researching your options. You can start your research by seeing where you can study.&#10;&#10;To get started, you will need the following: &#10; •&#9;Current Academic Transcript&#10;•&#9;Valid Passport&#10;•&#9;Course outlines of the subjects you plan to take&#10;•&#9;Course outlines of the subjects available locally that match the subjects you plan to take on exchange&#10;•&#9;Your degree information including your WAM, Program Code and major&#10;&#10;Get started today by registering for the appication." wrapText="true" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" style="-fx-base: black; -fx-focus-color: gold; -fx-font-family: arial; -fx-font-size: 20;" text="Am I Eligible?">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-base: white; -fx-border-color: white;" text="General requirements for all studentsYou should have at least a credit average to be considered, though some universities require higher grades. Students with less than a credit average should consult our Global Advisors.You need at least 18 remaining units of credit in your degree at the start of your exchange.Your exchange must be to a UNSW partner institution.&#10;&#10;Where language proficiency is required, you need to have studied that language at university level for at least 2 years. You may also be eligible if you've studied the language significantly outside of university or at high school level. Some universities require you to do a language proficiency test.Undergraduate studentsAre eligible to apply.&#10;&#10;Honours students Are eligible to apply but you should speak to your faculty about how exchange will impact your program. Students wishing to undertake research overseas should refer to research exchange.Postgraduate coursework studentsAre eligible to apply if their degree is at least 3 full time semesters in duration.Postgraduate research studentsWhile you can't apply for student exchange, you can apply for research exchange and for other global education opportunities." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" style="-fx-base: black; -fx-focus-color: gold; -fx-font-family: arial; -fx-font-size: 20;" text="Key Dates">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-base: white; -fx-border-color: white;" text="•&#9;April 21: UNSW Exchange Expo - find out about your global education options&#10;•&#9;May (end of month): Application deadline for student exchange in Semester 1 of the next year.&#10;•&#9;August 31: UNSW Scholarship applications for travel and exchange close.&#10;•&#9;October (mid-late October): Application deadline for student exchange in Semester 2 of the next year.&#10;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" style="-fx-base: black; -fx-focus-color: gold; -fx-font-family: arial; -fx-font-size: 20;" text="How and When can I apply?">
+                                      <content>
+                                        <AnchorPane style="-fx-background-color: white;">
+                                             <children>
+                                                <TextArea editable="false" layoutX="14.399999618530273" layoutY="14.399999618530273" style="-fx-background-color: white; -fx-base: white; -fx-border-color: white;" text="Undergraduate students - Can apply after completing 1 full-time semester (24 units of credit), and can go on exchange after completing 3 full-time semesters.Honours students - Usually go on exchange in the 1st semester of the Honours year. Speak to your faculty about how exchange will impact your program.Postgraduate coursework students - Full-time students need to apply in 1st Semester to go on exchange in their 3rd Semester OR apply in 2nd Semester to go on exchange in their 4th Semester.Application deadlinesThere are 2 application deadlines each year:May (end of month) - for student exchange in Semester 1, of the next year.October (mid to late October) - for student exchange in Semester 2, of the next year.Late applications incur a late fee (AUD$100) and may not be accepted.&#10;&#10; Please contact us for specific details.ApplicationTo start the application process and to access the application form, you need to first complete the Student Exchange Tutorial." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                   </font></TextArea>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <font>
+                                          <Font name="Arial" size="24.0" />
+                                       </font>
+                                    </TitledPane>
+                                </panes>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Accordion>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <right>
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ToolBar style="-fx-background-color: black;">
+                           <items>
+                              <Label text="Privacy Policy" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Copyright &amp; Disclaimer" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Accessibility" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Site Feedback" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Site Map" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                           </items>
+                        </ToolBar>
+                        <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW Sydney NSW 2052 Australia Telephone +61 2 93851000" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Authorised by Pro-Vice-Chancellor (Students)" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW CRICOS Provider Code: 00098G ABN: 57 195 873 179" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Region maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: black;" />
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Page Last updated: 18 September 2015" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="1366.0" stroke="#eebd34" strokeMiterLimit="0.0" strokeWidth="20.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

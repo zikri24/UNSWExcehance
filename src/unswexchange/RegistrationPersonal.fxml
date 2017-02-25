@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unswexchange.RegistrationPersonalController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <ImageView fitHeight="69.0" fitWidth="367.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Business%20Logo.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Line endX="1366.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Line>
+                  <ToolBar style="-fx-background-color: black;">
+                     <items>
+                        <Label text="Home" textFill="GOLD">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator maxHeight="5.0" orientation="VERTICAL" />
+                        <Label text="About Exchange" textFill="#fffefe">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator maxHeight="5.0" orientation="VERTICAL" />
+                        <Region />
+                        <Region prefHeight="25.0" prefWidth="1023.0" />
+                        <Hyperlink onAction="#logoutPressed" text="Login" textFill="GOLD" underline="true" />
+                     </items>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <AnchorPane>
+               <children>
+                  <VBox fillWidth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <VBox prefHeight="288.0" prefWidth="726.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                           <children>
+                              <ToolBar prefHeight="47.0" prefWidth="1306.0" style="-fx-background-color: black; -fx-border-radius: 10; -fx-background-radius: 10 10 0 0;">
+                                 <items>
+                                    <Label text="Registration" textFill="#fffefa">
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="15.0" text="Personal" textFill="GOLD">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Separator prefHeight="10.0" prefWidth="100.0" />
+                                       </graphic>
+                                    </Label>
+                                    <Label layoutX="236.0" layoutY="15.0" text="Course" textFill="#fffefa">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Separator prefHeight="0.0" prefWidth="100.0" />
+                                       </graphic>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="15.0" text="Complete" textFill="#fffefa">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Separator prefWidth="100.0" />
+                                       </graphic>
+                                    </Label>
+                                 </items>
+                              </ToolBar>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="checkForm" text="Label" visible="false">
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="1213.0">
+                                 <children>
+                                    <Label text="Family Name:">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="50.0" top="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" text="Given Name:">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="150.0" top="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="43.0" layoutY="10.0" text="Email">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="150.0" top="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="1213.0">
+                                 <children>
+                                    <TextField fx:id="familyName" prefHeight="26.0" prefWidth="175.0">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="givenNameText" prefHeight="26.0" prefWidth="175.0">
+                                       <HBox.margin>
+                                          <Insets left="65.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="emailText" layoutX="173.0" layoutY="10.0" prefHeight="39.0" prefWidth="175.0" promptText="email@email.com">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="familyLabel" text="Label" visible="false">
+                                       <padding>
+                                          <Insets left="60.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="givenLabel" text="Label" visible="false">
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="emailLabel" text="Label" visible="false">
+                                       <padding>
+                                          <Insets left="150.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="1213.0">
+                                 <children>
+                                    <Label text="Postal Address:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="50.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="1213.0">
+                                 <children>
+                                    <TextField fx:id="streetAddress" prefHeight="26.0" prefWidth="639.0" promptText="Street Address">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="streetLabel" text="Label" visible="false">
+                                       <padding>
+                                          <Insets left="80.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="1213.0">
+                                 <children>
+                                    <TextField fx:id="suburb" prefHeight="23.0" prefWidth="175.0" promptText="Suburb">
+                                       <HBox.margin>
+                                          <Insets left="50.0" top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="postCode" prefHeight="26.0" prefWidth="175.0" promptText="Postcode">
+                                       <HBox.margin>
+                                          <Insets left="65.0" top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <ComboBox fx:id="stateCombo" prefHeight="26.0" prefWidth="175.0" promptText="State">
+                                       <HBox.margin>
+                                          <Insets left="50.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="suburbLabel" text="Label" visible="false">
+                                       <padding>
+                                          <Insets left="80.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="postcodeLabel" text="Label" visible="false">
+                                       <padding>
+                                          <Insets left="140.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="stateLabel" text="Label" visible="false">
+                                       <padding>
+                                          <Insets left="180.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="1213.0">
+                                 <children>
+                                    <Label text="Sex:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="50.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" text="Date of Birth:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="215.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label layoutX="43.0" layoutY="10.0" text="Contact number:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="140.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="1213.0">
+                                 <children>
+                                    <RadioButton fx:id="maleRadio" mnemonicParsing="false" text="Male">
+                                       <HBox.margin>
+                                          <Insets left="50.0" top="5.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton fx:id="femaleRadio" mnemonicParsing="false" text="Female">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="2.0" top="5.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <DatePicker fx:id="dobPick" promptText="Date of Birth">
+                                       <HBox.margin>
+                                          <Insets left="125.0" top="5.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                    <TextField fx:id="contactNo" prefHeight="23.0" prefWidth="175.0" promptText="e.g. 0401234567">
+                                       <HBox.margin>
+                                          <Insets left="50.0" top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="726.0">
+                           <children>
+                              <Button fx:id="nextButton" mnemonicParsing="false" onAction="#registerNextButtonPressed" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: Gold;" text="Next">
+                                 <HBox.margin>
+                                    <Insets left="500.0" right="10.0" top="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="50.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <Region prefHeight="343.0" prefWidth="270.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Region prefHeight="343.0" prefWidth="270.0" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ToolBar style="-fx-background-color: black;">
+                           <items>
+                              <Label text="Privacy Policy" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Copyright &amp; Disclaimer" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Accessibility" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Site Feedback" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Site Map" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                           </items>
+                        </ToolBar>
+                        <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW Sydney NSW 2052 Australia Telephone +61 2 93851000" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Authorised by Pro-Vice-Chancellor (Students)" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW CRICOS Provider Code: 00098G ABN: 57 195 873 179" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Region maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: black;" />
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Page Last updated: 18 September 2015" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="1366.0" stroke="#eebd34" strokeMiterLimit="0.0" strokeWidth="20.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

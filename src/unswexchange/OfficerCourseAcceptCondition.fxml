@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unswexchange.OfficerCourseDecisionController">
+   <children>
+      <AnchorPane layoutX="-22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="922.0" style="-fx-background-color: white;">
+         <children>
+            <VBox fillWidth="false">
+               <children>
+                  <Label text="Please enter the condition for the following course match:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="40.0" left="250.0" top="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <Label layoutX="11.0" layoutY="413.0" text="Foreign Course Code:  ">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="275.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="foreignCodeLabel" text="Course code pasted here">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="UNSW Course Code:    ">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="275.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="unswCodeLabel" text="Course code pasted here">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TextArea fx:id="conditionText" prefHeight="135.0" prefWidth="654.0" promptText="Enter conditions here. ">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="150.0" top="50.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <HBox prefHeight="52.0" prefWidth="875.0">
+                     <children>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: grey;" text="Cancel">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="60.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="acceptConditionSubmitButton" mnemonicParsing="false" onAction="#submitAcceptConditionButtonPressed" prefHeight="27.0" prefWidth="164.0" style="-fx-background-color: gold;" text="Submit">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="500.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="25.0" top="40.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Line endX="900.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Line endX="900.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

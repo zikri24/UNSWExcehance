@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="320.0" prefWidth="648.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unswexchange.OfficerApplicationDecisionDeclineController">
+   <children>
+      <Line endX="640.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0" />
+      <AnchorPane prefHeight="319.0" prefWidth="657.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="134.0" layoutY="34.0" text="Are you sure you want to decline the following applicaiton?">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="submitDecisionButton" layoutX="388.0" layoutY="271.0" mnemonicParsing="false" onAction="#submitButtonPressed" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: Green;" text="Submit Decision" textFill="WHITE" />
+            <Button fx:id="cancelButton" layoutX="168.0" layoutY="271.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: Grey;" text="Cancel" textFill="WHITE" />
+            <Label layoutX="400.0" layoutY="117.0" text="End Date :" AnchorPane.leftAnchor="380.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="378.0" layoutY="81.0" text="Exchange To:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="159.0" layoutY="117.0" text="Start Date:" AnchorPane.leftAnchor="137.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="134.0" layoutY="81.0" text="Student Name:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel" layoutX="237.0" layoutY="83.0" text="Name" />
+            <Label fx:id="startDateLabel" layoutX="238.0" layoutY="121.0" text="Start" />
+            <Label fx:id="uniLabel" layoutX="478.0" layoutY="83.0" text="Univeristy " />
+            <Label fx:id="endDateLabel" layoutX="482.0" layoutY="121.0" text="End Date" />
+            <TextArea fx:id="commentTextArea" layoutX="138.0" layoutY="150.0" prefHeight="104.0" prefWidth="393.0" />
+         </children>
+      </AnchorPane>
+      <Line endX="640.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Line>
+   </children>
+</VBox>

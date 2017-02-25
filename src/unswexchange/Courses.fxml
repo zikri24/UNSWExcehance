@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unswexchange.CoursesController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <ImageView fitHeight="69.0" fitWidth="367.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Business%20Logo.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Line endX="1366.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Line>
+                  <HBox />
+                  <ToolBar style="-fx-background-color: black;">
+                     <items>
+                        <Hyperlink onAction="#myDashPressed" text="My Dashboard" textFill="GOLD" />
+                        <Separator maxHeight="20.0" maxWidth="1.0" minWidth="1.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="1.0" />
+                        <Hyperlink onAction="#aboutPressed" text="About Exchange" textFill="GOLD" />
+                        <Separator maxHeight="20.0" maxWidth="1.0" orientation="VERTICAL" />
+                        <Region prefHeight="25.0" prefWidth="820.0" />
+                        <Label fx:id="welcomeLabel" prefHeight="17.0" prefWidth="131.0" text="Welcome" textFill="#fcfcfc">
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding>
+                        </Label>
+                        <Hyperlink alignment="TOP_RIGHT" onAction="#logoutPressed" text="Logout" textAlignment="CENTER" textFill="GOLD" underline="true" />
+                     </items>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </top>
+         <left>
+            <Region prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Region prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <VBox style="-fx-border-radius: 10;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <VBox fillWidth="false" minWidth="-Infinity" prefHeight="443.0" prefWidth="906.0" style="-fx-border-radius: 10;">
+                     <children>
+                        <VBox prefHeight="320.0" prefWidth="846.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                           <children>
+                              <ToolBar prefHeight="35.0" prefWidth="847.0" style="-fx-background-color: black; -fx-background-radius: 10 10 0 0;">
+                                 <items>
+                                    <Label text="Apply" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="60.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="15.0" text="General" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Separator prefHeight="10.0" prefWidth="70.0">
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </Separator>
+                                       </graphic>
+                                    </Label>
+                                    <Label layoutX="236.0" layoutY="15.0" text="Courses" textFill="GOLD">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Separator prefHeight="0.0" prefWidth="70.0">
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </Separator>
+                                       </graphic>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="15.0" text="Questions" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Separator prefWidth="70.0">
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </Separator>
+                                       </graphic>
+                                    </Label>
+                                    <Label layoutX="434.0" layoutY="16.0" text="Attachments" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Separator prefWidth="70.0">
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </Separator>
+                                       </graphic>
+                                    </Label>
+                                    <Label layoutX="609.0" layoutY="16.0" text="Complete" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Separator prefWidth="70.0">
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </Separator>
+                                       </graphic>
+                                    </Label>
+                                 </items>
+                              </ToolBar>
+                              <TableView fx:id="coursesTable" prefHeight="282.0" prefWidth="844.0" style="-fx-border-radius: 0 0 10 10; -fx-background-radius: 0 0 10 10;">
+                                 <columns>
+                                    <TableColumn fx:id="courseCodeCell" prefWidth="116.0" style="-fx-alignment: top-center;" text="UNSW Course " />
+                                    <TableColumn fx:id="courseNameCell" minWidth="0.0" prefWidth="121.0" />
+                                    <TableColumn fx:id="foreignCcourseCodeCell" minWidth="0.0" prefWidth="125.0" style="-fx-alignment: top-center;" text="Foreign Course " />
+                                    <TableColumn fx:id="foreignCcourseNameCell" prefWidth="147.0" />
+                                    <TableColumn fx:id="editColumn" prefWidth="172.0" style="-fx-alignment: center;" />
+                                    <TableColumn fx:id="removeColumn" prefWidth="161.0" style="-fx-alignment: center;" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox prefHeight="45.0" prefWidth="844.0">
+                           <children>
+                              <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: grey;" text="Back">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="addCourseButton" mnemonicParsing="false" onAction="#addCourseButtonPressed" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: Green;" text="Add a Course" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="400.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#submitPressed" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: gold;" text="Next">
+                                 <HBox.margin>
+                                    <Insets left="50.0" right="5.0" top="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar style="-fx-background-color: black;">
+                     <items>
+                        <Label text="Privacy Policy" textFill="#ebba34">
+                           <font>
+                              <Font name="Arial" size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="Copyright &amp; Disclaimer" textFill="#ebba34">
+                           <font>
+                              <Font name="Arial" size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="Accessibility" textFill="#ebba34">
+                           <font>
+                              <Font name="Arial" size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="Site Feedback" textFill="#ebba34">
+                           <font>
+                              <Font name="Arial" size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Separator orientation="VERTICAL" />
+                        <Label text="Site Map" textFill="#ebba34">
+                           <font>
+                              <Font name="Arial" size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <Region />
+                     </items>
+                  </ToolBar>
+                  <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW Sydney NSW 2052 Australia Telephone +61 2 93851000" textFill="WHITE">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" />
+                     </padding>
+                  </Label>
+                  <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Authorised by Pro-Vice-Chancellor (Students)" textFill="WHITE">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" />
+                     </padding>
+                  </Label>
+                  <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW CRICOS Provider Code: 00098G ABN: 57 195 873 179" textFill="WHITE">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" />
+                     </padding>
+                  </Label>
+                  <Region maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: black;" />
+                  <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Page Last updated: 18 September 2015" textFill="WHITE">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" />
+                     </padding>
+                  </Label>
+                  <Line endX="1366.0" stroke="#eebd34" strokeMiterLimit="0.0" strokeWidth="20.0" />
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

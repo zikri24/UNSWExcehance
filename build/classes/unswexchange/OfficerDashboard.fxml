@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unswexchange.OfficerDashboardController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane>
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="logoImageView" fitHeight="69.0" fitWidth="367.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Business%20Logo.jpg" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Line endX="1357.0" stroke="GOLD" strokeMiterLimit="0.0" strokeWidth="10.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Line>
+                        <ToolBar style="-fx-background-color: black;" VBox.vgrow="ALWAYS">
+                           <items>
+                              <Hyperlink onAction="#myDashPressed" text="My Dashboard" textFill="GOLD" />
+                              <Separator orientation="VERTICAL" />
+                              <Hyperlink onAction="#aboutPressed" text="About Exchange" textFill="GOLD" />
+                              <Separator orientation="VERTICAL" />
+                              <Region />
+                              <Region prefHeight="19.0" prefWidth="919.0" />
+                              <Label fx:id="welcomeLabel" prefHeight="17.0" prefWidth="132.0" text="Welcome" textFill="#f2f2f2" />
+                              <Hyperlink onAction="#logoutPressed" text="Logout" textFill="GOLD">
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </Hyperlink>
+                           </items>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane id="imageScientiaNight" stylesheets="@mainStyleSheet.css">
+               <children>
+                  <GridPane style="-fx-background-image: ..\Images\R950600-UNSW_mall_view_from_Scientia.jpg;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="5.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fx:id="profileImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../Images/profileLogo.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets top="50.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="allAppsImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../Images/appLogo.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets top="50.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="searchImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../Images/myAppsLogo.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets top="50.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="myAppsImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../Images/appLogo.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets top="50.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <ImageView fx:id="allAppsNotImage" fitHeight="25.0" fitWidth="60.0" layoutX="210.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Images/red-button-badge-circle-gloss.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="210.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label fx:id="allAppsNotLabel" layoutX="219.0" layoutY="4.0" prefHeight="17.0" prefWidth="33.0" text="2" textFill="GOLD" visible="false" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="allAppButton" mnemonicParsing="false" onAction="#allAppButtonPressed" style="-fx-background-color: #ffd700;" text="All Applications">
+                                 <VBox.margin>
+                                    <Insets left="125.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <ImageView fx:id="myAppsNotImage" fitHeight="25.0" fitWidth="60.0" layoutX="210.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Images/red-button-badge-circle-gloss.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="210.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label fx:id="myAppsNotLabel" layoutX="219.0" layoutY="4.0" text="2" textFill="GOLD" visible="false" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="myAppButton" mnemonicParsing="false" onAction="#myAppButtonPressed" style="-fx-background-color: #ffd700;" text="My Applications">
+                                 <VBox.margin>
+                                    <Insets left="125.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <ImageView fx:id="searchNotImage" fitHeight="25.0" fitWidth="60.0" layoutX="210.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Images/red-button-badge-circle-gloss.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="210.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label fx:id="searchNotLabel" layoutX="219.0" layoutY="4.0" text="3" textFill="GOLD" visible="false" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonPressed" style="-fx-background-color: #ffd700;" text="      Search      ">
+                                 <VBox.margin>
+                                    <Insets left="135.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <ImageView fx:id="profileNotImage" fitHeight="25.0" fitWidth="60.0" layoutX="210.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Images/red-button-badge-circle-gloss.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="210.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label fx:id="profileNotLabel" layoutX="219.0" layoutY="4.0" text="3" textFill="GOLD" visible="false" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileButtonPressed" style="-fx-background-color: #ffd700;" text="      Profile      ">
+                                 <VBox.margin>
+                                    <Insets left="135.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ToolBar style="-fx-background-color: black;">
+                           <items>
+                              <Label text="Privacy Policy" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Copyright &amp; Disclaimer" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Accessibility" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Site Feedback" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator orientation="VERTICAL" />
+                              <Label text="Site Map" textFill="GOLD">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                           </items>
+                        </ToolBar>
+                        <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW Sydney NSW 2052 Australia Telephone +61 2 93851000" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Authorised by Pro-Vice-Chancellor (Students)" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="UNSW CRICOS Provider Code: 00098G ABN: 57 195 873 179" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Region maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: black;" />
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" text="Page Last updated: 18 September 2015" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="1366.0" stroke="#eebd34" strokeMiterLimit="0.0" strokeWidth="20.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
